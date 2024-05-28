@@ -3,37 +3,34 @@ import CIcon from '@coreui/icons-react'
 import {
   cilDescription,
   cilHome,
-  cilNotes,
-  cilGroup,
-  cilList,
   cilAccountLogout,
+  cilSpeedometer,
+  cilGroup,
 } from '@coreui/icons'
 import { CNavGroup, CNavItem, CNavTitle } from '@coreui/react'
 
-const _nav = [
+const _navWaliKelas = [
   {
     component: CNavItem,
     name: 'Dashboard',
     to: '/dashboard',
     icon: <CIcon icon={cilHome} customClassName="nav-icon" />,
+    // badge: {
+    //   color: 'info',
+    //   text: 'NEW',
+    // },
   },
   {
     component: CNavItem,
-    name: 'Daftar Kelas',
-    href: '#',
-    icon: <CIcon icon={cilList} customClassName="nav-icon" />,
-  },
-  {
-    component: CNavItem,
-    name: 'Daftar Guru',
+    name: 'Daftar Siswa',
     href: '#',
     icon: <CIcon icon={cilGroup} customClassName="nav-icon" />,
   },
   {
     component: CNavItem,
-    name: 'Rekap Absen',
+    name: 'Upload Surat Sakit',
     href: '#',
-    icon: <CIcon icon={cilNotes} customClassName="nav-icon" />,
+    icon: <CIcon icon={cilDescription} customClassName="nav-icon" />,
   },
   {
     component: CNavItem,
@@ -43,4 +40,4 @@ const _nav = [
   },
 ]
 
-export default _nav
+export default _navWaliKelas

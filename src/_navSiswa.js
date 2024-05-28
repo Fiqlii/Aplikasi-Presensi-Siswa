@@ -3,14 +3,11 @@ import CIcon from '@coreui/icons-react'
 import {
   cilDescription,
   cilHome,
-  cilNotes,
-  cilGroup,
-  cilList,
   cilAccountLogout,
 } from '@coreui/icons'
 import { CNavGroup, CNavItem, CNavTitle } from '@coreui/react'
 
-const _nav = [
+const _navSiswa = [
   {
     component: CNavItem,
     name: 'Dashboard',
@@ -19,21 +16,9 @@ const _nav = [
   },
   {
     component: CNavItem,
-    name: 'Daftar Kelas',
+    name: 'Absen',
     href: '#',
-    icon: <CIcon icon={cilList} customClassName="nav-icon" />,
-  },
-  {
-    component: CNavItem,
-    name: 'Daftar Guru',
-    href: '#',
-    icon: <CIcon icon={cilGroup} customClassName="nav-icon" />,
-  },
-  {
-    component: CNavItem,
-    name: 'Rekap Absen',
-    href: '#',
-    icon: <CIcon icon={cilNotes} customClassName="nav-icon" />,
+    icon: <CIcon icon={cilDescription} customClassName="nav-icon" />,
   },
   {
     component: CNavItem,
@@ -43,4 +28,4 @@ const _nav = [
   },
 ]
 
-export default _nav
+export default _navSiswa

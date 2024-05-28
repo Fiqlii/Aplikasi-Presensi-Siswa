@@ -8,6 +8,10 @@ import 'simplebar-react/dist/simplebar.min.css'
 import { CBadge, CNavLink, CSidebarNav } from '@coreui/react'
 
 export const AppSidebarNav = ({ items }) => {
+//   useEffect(() => {
+//     console.log('ini data', items)
+//   }, []
+// )
   const navLink = (name, icon, badge, indent = false) => {
     return (
       <>

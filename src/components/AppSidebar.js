@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useState, useEffect} from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 
 import {
@@ -12,14 +12,16 @@ import {
 import CIcon from '@coreui/icons-react'
 
 import { AppSidebarNav } from './AppSidebarNav'
-
-import { logo } from 'src/assets/brand/logo'
+import  logo  from 'src/assets/images/logo.png'
 import { sygnet } from 'src/assets/brand/sygnet'
 
 // sidebar nav config
-import navigation from '../_nav'
+import navigationKesiswaan from '../_nav'
+import navigationSiswa from '../_navSiswa'
+import navigationWaliKelas from '../_navWaliKelas'
 
 const AppSidebar = () => {
+  const [checkLogin, SetCheckLogin] = useState('')
   const dispatch = useDispatch()
   const unfoldable = useSelector((state) => state.sidebarUnfoldable)
   const sidebarShow = useSelector((state) => state.sidebarShow)
@@ -27,7 +29,7 @@ const AppSidebar = () => {
   return (
     <CSidebar
       className="border-end"
-      colorScheme="dark"
+      colorScheme="light"
       position="fixed"
       unfoldable={unfoldable}
       visible={sidebarShow}
@@ -35,9 +37,11 @@ const AppSidebar = () => {
         dispatch({ type: 'set', sidebarShow: visible })
       }}
     >
-      <CSidebarHeader className="border-bottom">
+      <CSidebarHeader className="justify-content-center align-items-center ml-lg-1 border-bottom">
         <CSidebarBrand to="/">
-          <CIcon customClassName="sidebar-brand-full" icon={logo} height={32} />
+          {/* <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginLeft: '1rem'}}> */}
+            <img src={logo} alt="Logo" height={32} width={32}/>
+          {/*     </div> */}
           <CIcon customClassName="sidebar-brand-narrow" icon={sygnet} height={32} />
         </CSidebarBrand>
         <CCloseButton
@@ -46,7 +50,13 @@ const AppSidebar = () => {
           onClick={() => dispatch({ type: 'set', sidebarShow: false })}
         />
       </CSidebarHeader>
-      <AppSidebarNav items={navigation} />
+      {checkLogin == 'siswa' ?
+      <AppSidebarNav items={navigationSiswa} />
+      : checkLogin == "walikelas" ?
+      <AppSidebarNav items={navigationWaliKelas} />
+      :
+      <AppSidebarNav items={navigationKesiswaan} />
+      }
       <CSidebarFooter className="border-top d-none d-lg-flex">
         <CSidebarToggler
           onClick={() => dispatch({ type: 'set', sidebarUnfoldable: !unfoldable })}
