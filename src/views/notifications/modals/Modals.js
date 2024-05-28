@@ -52,7 +52,7 @@ const StaticBackdrop = () => {
           <CModalTitle>Modal title</CModalTitle>
         </CModalHeader>
         <CModalBody>
-          I will not close if you click outside me. Don&#39;teven try to press escape key.
+          I will not close if you click outside me. Don&#39;teven try to press escape key aamiin.
         </CModalBody>
         <CModalFooter>
           <CButton color="secondary" onClick={() => setVisible(false)}>
