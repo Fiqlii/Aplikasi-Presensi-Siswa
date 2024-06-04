@@ -27,11 +27,10 @@ const Kelas = () => {
   const [visible, setVisible] = useState(false)
   return (
     <>
-      <CCard>
-        {/* <CCardHeader>Header</CCardHeader> */}
+      <CCard className='py-4 px-3'>
         <CCardBody>
-          <CCardTitle>Kelas VII A</CCardTitle>
-          <CTable>
+          <CCardTitle className='p-2'>Kelas VII A</CCardTitle>
+          <CTable className='px-5 mt-3'>
             <CTableHead color="primary">
               <CTableRow>
                 <CTableHeaderCell scope="col">No</CTableHeaderCell>

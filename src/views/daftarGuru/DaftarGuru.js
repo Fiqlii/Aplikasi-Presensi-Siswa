@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { useState } from 'react'
 import CIcon from '@coreui/icons-react'
-// import classNames from 'classnames'
+
 
 import {
   CCard,
@@ -13,6 +13,11 @@ import {
   CTableHeaderCell,
   CTableRow,
   CTableDataCell,
+  CRow,
+  CForm,
+  CFormInput,
+  CPagination,
+  CPaginationItem,
 } from '@coreui/react'
 
 import {
@@ -21,12 +26,49 @@ import {
 } from '@coreui/icons';
 
 const DaftarGuru = () => {
+
+  const [entries, setEntries] = useState(5);
+
   return (
     <>
-      <CCard>
+      <CCard className='py-4 px-3'>
         <CCardBody>
-          <CCardTitle>Daftar Nama Guru</CCardTitle>
-          <CTable>
+          <CRow xs={{ gutter: 2 }}>
+            <CCardTitle className="d-flex justify-content-between">
+              <h3 style={{ fontWeight: 'bold' }}>Daftar Guru</h3>
+              <CButton
+                color="primary"
+                shape="rounded-pill"
+              >
+                Tambah Data Guru
+              </CButton>
+            </CCardTitle>
+            <CCardTitle className="d-flex justify-content-between">
+              <div className="d-flex align-items-center">
+                Show
+                <CForm className="mx-2">
+                  <CFormInput
+                    type="number"
+                    id="entries"
+                    defaultValue={entries}
+                    onChange={(e) => setEntries(e.target.value)}
+                    style={{ width: '70px' }}
+                  />
+                </CForm>
+                Entries
+              </div>
+              <div className="d-flex align-items-center">
+                Search
+                <CForm className="mx-2">
+                  <CFormInput
+                    type="search"
+                    id="SearchData"
+                  />
+                </CForm>
+              </div>
+            </CCardTitle>
+          </CRow>
+          <CTable className='px-5 mt-3'>
             <CTableHead color="primary">
               <CTableRow>
                 <CTableHeaderCell scope="col">No</CTableHeaderCell>
@@ -73,7 +115,7 @@ const DaftarGuru = () => {
                 </CTableDataCell>
               </CTableRow>
               <CTableRow>
-                <CTableHeaderCell scope="row">2</CTableHeaderCell>
+                <CTableHeaderCell scope="row">3</CTableHeaderCell>
                 <CTableDataCell>Asep Sunandar</CTableDataCell>
                 <CTableDataCell>2115110339</CTableDataCell>
                 <CTableDataCell>43215678</CTableDataCell>
@@ -90,7 +132,7 @@ const DaftarGuru = () => {
                 </CTableDataCell>
               </CTableRow>
               <CTableRow>
-                <CTableHeaderCell scope="row">2</CTableHeaderCell>
+                <CTableHeaderCell scope="row">4</CTableHeaderCell>
                 <CTableDataCell>Agisti Rahmawati</CTableDataCell>
                 <CTableDataCell>2115110342</CTableDataCell>
                 <CTableDataCell>812348765</CTableDataCell>
@@ -108,6 +150,13 @@ const DaftarGuru = () => {
               </CTableRow>
             </CTableBody>
           </CTable>
+          <CPagination align="end" aria-label="Page navigation example" className="mt-4">
+            <CPaginationItem disabled>Previous</CPaginationItem>
+            <CPaginationItem>1</CPaginationItem>
+            <CPaginationItem>2</CPaginationItem>
+            <CPaginationItem>3</CPaginationItem>
+            <CPaginationItem>Next</CPaginationItem>
+          </CPagination>
         </CCardBody>
       </CCard>
     </>

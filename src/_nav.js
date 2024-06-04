@@ -22,7 +22,7 @@ const _nav = [
   {
     component: CNavItem,
     name: 'Daftar Kelas',
-    to: '/Kelas',
+    to: '/daftarKelas',
     icon: <CIcon icon={cilList} customClassName="nav-icon" />,
   },
   {

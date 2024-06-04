@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-// import CIcon from '@coreui/icons-react'
 
 import {
   CForm,
@@ -22,27 +21,33 @@ const EditDataSiswa = () => {
   return (
     <>
     <CCard>
-      <CCardBody>
-        <CCardTitle>Edit Data Siswa</CCardTitle>
-        <CForm>
-          <div className="mb-3">
+      <CCardBody className='px-5 mt-3'>
+        <CCardTitle className='py-2 mt-3'>Edit Data Siswa</CCardTitle>
+        <CForm className='row g-3'>
+          <div className="col-md-6 mb-3">
             <CFormLabel htmlFor="exampleFormControlInput1">Nama</CFormLabel>
             <CFormInput type="email" id="exampleFormControlInput1" placeholder="Masukan Nama Siswa"/>
           </div>
-          <div className="mb-3">
+          <div className="col-md-6 mb-3">
             <CFormLabel htmlFor="exampleFormControlInput1">NIS</CFormLabel>
             <CFormInput type="email" id="exampleFormControlInput1" placeholder="Masukan Nomor NIS"/>
           </div>
-          <div className="mb-3">
+          <div className="col-md-6 mb-3">
             <CFormLabel htmlFor="exampleFormControlInput1">Kelas</CFormLabel>
             <CFormInput type="email" id="exampleFormControlInput1" placeholder="Input Nama Kelas"/>
           </div>
-          <div className="mb-3">
+          <div className="col-md-6 mb-3">
             <CFormLabel htmlFor="exampleFormControlInput1">No Orang Tua</CFormLabel>
             <CFormInput type="email" id="exampleFormControlInput1" placeholder="Masukan Nomor Telepon Orang Tua"/>
           </div>
         </CForm>
-        <CButton color="primary" onClick={() => setVisible(!visible)}>Submit</CButton>
+        <CButton
+          color="primary"
+          onClick={() => setVisible(!visible)}
+          className="d-flex justify-content-center mx-auto my-5"
+        >
+          Submit
+        </CButton>
         <CModal
           alignment="center"
           visible={visible}
