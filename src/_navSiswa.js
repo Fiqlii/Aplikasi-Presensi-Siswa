@@ -1,30 +1,33 @@
 import React from 'react'
-import CIcon from '@coreui/icons-react'
+
 import {
-  cilDescription,
-  cilHome,
-  cilAccountLogout,
-} from '@coreui/icons'
-import { CNavGroup, CNavItem, CNavTitle } from '@coreui/react'
+  HomeIcon,
+  TableCellsIcon,
+  ArrowLeftStartOnRectangleIcon,
+} from '@heroicons/react/24/solid'
+
+import {
+  CNavItem,
+} from '@coreui/react'
 
 const _navSiswa = [
   {
     component: CNavItem,
     name: 'Dashboard',
     to: '/dashboard',
-    icon: <CIcon icon={cilHome} customClassName="nav-icon" />,
+    icon: <HomeIcon className="nav-icon text-blue-500"/>,
   },
   {
     component: CNavItem,
     name: 'Absen',
     href: '#',
-    icon: <CIcon icon={cilDescription} customClassName="nav-icon" />,
+    icon: <TableCellsIcon className="nav-icon text-blue-500"/>,
   },
   {
     component: CNavItem,
     name: 'Sign Out',
     href: '#',
-    icon: <CIcon icon={cilAccountLogout} customClassName="nav-icon" />,
+    icon: <ArrowLeftStartOnRectangleIcon className="nav-icon text-blue-500"/>,
   },
 ]
 

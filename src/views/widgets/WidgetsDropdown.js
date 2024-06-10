@@ -7,11 +7,11 @@ import {
   CWidgetStatsC,
 } from '@coreui/react'
 import { getStyle } from '@coreui/utils'
-import CIcon from '@coreui/icons-react'
+
 import {
-  cilPeople,
-  cilLibraryBuilding,
-} from '@coreui/icons' // Tambahkan impor cilChartPie
+  UserGroupIcon,
+  BuildingOfficeIcon,
+} from '@heroicons/react/24/solid'
 
 const WidgetsDropdown = (props) => {
   const widgetChartRef1 = useRef(null)
@@ -40,7 +40,7 @@ const WidgetsDropdown = (props) => {
       <CCol xs={4}>
       <CWidgetStatsC
         className="mb-3"
-        icon={<CIcon icon={cilPeople} height={36} />}s
+        icon={<UserGroupIcon className="text-blue-500 size-lg" style={{ width: '36px', height: '36px' }}/>}
         color='info'
         inverse
         progress={{ color: 'info', value: 100 }}
@@ -52,7 +52,7 @@ const WidgetsDropdown = (props) => {
       <CCol xs={4}>
       <CWidgetStatsC
         className="mb-3"
-        icon={<CIcon icon={cilPeople} height={36} />}
+        icon={<UserGroupIcon className="text-blue-500 size-lg" style={{ width: '36px', height: '36px' }}/>}
         color="success"
         inverse
         progress={{ color: 'success', value: 100 }}
@@ -64,7 +64,7 @@ const WidgetsDropdown = (props) => {
       <CCol xs={4}>
       <CWidgetStatsC
         className="mb-3"
-        icon={<CIcon icon={cilLibraryBuilding} height={36} />}
+        icon={<BuildingOfficeIcon className="text-blue-500 size-lg" style={{ width: '36px', height: '36px' }}/>}
         color="warning"
         inverse
         progress={{ color: 'warning', value: 100 }}

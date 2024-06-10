@@ -1,42 +1,40 @@
 import React from 'react'
-import CIcon from '@coreui/icons-react'
+
 import {
-  cilDescription,
-  cilHome,
-  cilAccountLogout,
-  cilSpeedometer,
-  cilGroup,
-} from '@coreui/icons'
-import { CNavGroup, CNavItem, CNavTitle } from '@coreui/react'
+  HomeIcon,
+  UserGroupIcon,
+  ArrowLeftStartOnRectangleIcon,
+  DocumentPlusIcon,
+} from '@heroicons/react/24/solid'
+
+import {
+  CNavItem,
+} from '@coreui/react'
 
 const _navWaliKelas = [
   {
     component: CNavItem,
     name: 'Dashboard',
     to: '/dashboard',
-    icon: <CIcon icon={cilHome} customClassName="nav-icon" />,
-    // badge: {
-    //   color: 'info',
-    //   text: 'NEW',
-    // },
+    icon: <HomeIcon className="nav-icon text-blue-500"/>,
   },
   {
     component: CNavItem,
     name: 'Daftar Siswa',
     href: '#',
-    icon: <CIcon icon={cilGroup} customClassName="nav-icon" />,
+    icon: <UserGroupIcon className="nav-icon text-blue-500"/>,
   },
   {
     component: CNavItem,
     name: 'Upload Surat Sakit',
     href: '#',
-    icon: <CIcon icon={cilDescription} customClassName="nav-icon" />,
+    icon: <DocumentPlusIcon className="nav-icon text-blue-500"/>,
   },
   {
     component: CNavItem,
     name: 'Sign Out',
     href: '#',
-    icon: <CIcon icon={cilAccountLogout} customClassName="nav-icon" />,
+    icon: <ArrowLeftStartOnRectangleIcon className="nav-icon text-blue-500"/>,
   },
 ]
 

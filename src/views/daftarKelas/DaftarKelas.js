@@ -1,6 +1,4 @@
 import React, { useState } from 'react'
-import CIcon from '@coreui/icons-react'
-// import classNames from 'classnames'
 
 import {
   CCard,
@@ -18,13 +16,13 @@ import {
   CForm,
   CFormInput,
   CRow,
-  // CSmartPagination,
+  CBreadcrumb,
+  CBreadcrumbItem,
 } from '@coreui/react'
 
-// import { CIcon } from '@coreui/icons-react';
 import {
-  cilCog,
-} from '@coreui/icons';
+  EyeIcon,
+} from '@heroicons/react/24/solid'
 
 const DaftarKelas = () => {
 
@@ -32,17 +30,16 @@ const DaftarKelas = () => {
 
   return (
     <>
+    <div className='container-lg px-4 px-3'>
+      <CBreadcrumb className='breadcrumb mb-4'>
+        <CBreadcrumbItem href="#/dashboard">Dashboard</CBreadcrumbItem>
+        <CBreadcrumbItem active>Daftar Kelas</CBreadcrumbItem>
+      </CBreadcrumb>
       <CCard className="py-4 px-3">
         <CCardBody>
           <CRow xs={{ gutter: 2 }}>
             <CCardTitle className="d-flex justify-content-between">
               <h3 style={{ fontWeight: 'bold' }}>Daftar Kelas</h3>
-              <CButton
-                color="primary"
-                shape="rounded-pill"
-              >
-                Tambah Data Kelas
-              </CButton>
             </CCardTitle>
             <CCardTitle className="d-flex justify-content-between">
               <div className="d-flex align-items-center">
@@ -84,8 +81,8 @@ const DaftarKelas = () => {
                 <CTableDataCell>VII A</CTableDataCell>
                 <CTableDataCell>Asep Sunandar</CTableDataCell>
                 <CTableDataCell>
-                  <CButton color="primary" style={{ width: '40px', height: '40px', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '0' }}>
-                    <CIcon icon={cilCog} customClassName="nav-icon" style={{ width: '24px', height: '24px' }}/>
+                  <CButton color="primary" style={{ width: '40px', height: '40px', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '0' }} as="button" href="#/Kelas">
+                    <EyeIcon className="text-blue-500 size-lg" style={{ width: '24px', height: '24px' }}/>
                   </CButton>
                 </CTableDataCell>
               </CTableRow>
@@ -94,8 +91,8 @@ const DaftarKelas = () => {
                 <CTableDataCell>VII B</CTableDataCell>
                 <CTableDataCell>Dang Iyun</CTableDataCell>
                 <CTableDataCell>
-                  <CButton color="primary" style={{ width: '40px', height: '40px', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '0' }}>
-                    <CIcon icon={cilCog} customClassName="nav-icon" style={{ width: '24px', height: '24px' }}/>
+                  <CButton color="primary" style={{ width: '40px', height: '40px', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '0' }} as="button" href="#/Kelas">
+                    <EyeIcon className="text-blue-500 size-lg" style={{ width: '24px', height: '24px' }}/>
                   </CButton>
                 </CTableDataCell>
               </CTableRow>
@@ -104,8 +101,8 @@ const DaftarKelas = () => {
                 <CTableDataCell>VII C</CTableDataCell>
                 <CTableDataCell>Sri Wahyuni</CTableDataCell>
                 <CTableDataCell>
-                  <CButton color="primary" style={{ width: '40px', height: '40px', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '0' }}>
-                    <CIcon icon={cilCog} customClassName="nav-icon" style={{ width: '24px', height: '24px' }}/>
+                  <CButton color="primary" style={{ width: '40px', height: '40px', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '0' }} as="button" href="#/Kelas">
+                    <EyeIcon className="text-blue-500 size-lg" style={{ width: '24px', height: '24px' }}/>
                   </CButton>
                 </CTableDataCell>
               </CTableRow>
@@ -114,8 +111,8 @@ const DaftarKelas = () => {
                 <CTableDataCell>VII D</CTableDataCell>
                 <CTableDataCell>Tuti</CTableDataCell>
                 <CTableDataCell>
-                  <CButton color="primary" style={{ width: '40px', height: '40px', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '0' }}>
-                    <CIcon icon={cilCog} customClassName="nav-icon" style={{ width: '24px', height: '24px' }}/>
+                  <CButton color="primary" style={{ width: '40px', height: '40px', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '0' }} as="button" href="#/Kelas">
+                    <EyeIcon className="text-blue-500 size-lg" style={{ width: '24px', height: '24px' }}/>
                   </CButton>
                 </CTableDataCell>
               </CTableRow>
@@ -124,8 +121,8 @@ const DaftarKelas = () => {
                 <CTableDataCell>VII E</CTableDataCell>
                 <CTableDataCell>Sri Wahyuni</CTableDataCell>
                 <CTableDataCell>
-                  <CButton color="primary" style={{ width: '40px', height: '40px', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '0' }}>
-                    <CIcon icon={cilCog} customClassName="nav-icon" style={{ width: '24px', height: '24px' }}/>
+                  <CButton color="primary" style={{ width: '40px', height: '40px', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '0' }} as="button" href="#/Kelas">
+                    <EyeIcon className="text-blue-500 size-lg" style={{ width: '24px', height: '24px' }}/>
                   </CButton>
                 </CTableDataCell>
               </CTableRow>
@@ -134,8 +131,8 @@ const DaftarKelas = () => {
                 <CTableDataCell>VII F</CTableDataCell>
                 <CTableDataCell>Endang Sukanti</CTableDataCell>
                 <CTableDataCell>
-                  <CButton color="primary" style={{ width: '40px', height: '40px', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '0' }}>
-                    <CIcon icon={cilCog} customClassName="nav-icon" style={{ width: '24px', height: '24px' }}/>
+                  <CButton color="primary" style={{ width: '40px', height: '40px', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '0' }} as="button" href="#/Kelas">
+                    <EyeIcon className="text-blue-500 size-lg" style={{ width: '24px', height: '24px' }}/>
                   </CButton>
                 </CTableDataCell>
               </CTableRow>
@@ -150,6 +147,7 @@ const DaftarKelas = () => {
           </CPagination>
         </CCardBody>
       </CCard>
+      </div>
     </>
   )
 }

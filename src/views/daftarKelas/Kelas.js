@@ -1,7 +1,4 @@
-// import React from 'react'
 import React, { useState } from 'react'
-import CIcon from '@coreui/icons-react'
-// import classNames from 'classnames'
 
 import {
   CCard,
@@ -20,13 +17,24 @@ import {
   CModalTitle,
   CModalBody,
   CModalFooter,
+  CBreadcrumb,
+  CBreadcrumbItem,
 } from '@coreui/react'
+
+import FotoDatang from '../../assets/images/vue.jpg';
+import FotoPulang from '../../assets/images/react.jpg';
 
 
 const Kelas = () => {
   const [visible, setVisible] = useState(false)
   return (
     <>
+    <div className='container-lg px-4'>
+      <CBreadcrumb className='breadcrumb mb-4'>
+        <CBreadcrumbItem href="#/dashboard">Dashboard</CBreadcrumbItem>
+        <CBreadcrumbItem href="#/daftarKelas">Daftar Kelas</CBreadcrumbItem>
+        <CBreadcrumbItem active>Daftar Kelas</CBreadcrumbItem>
+      </CBreadcrumb>
       <CCard className='py-4 px-3'>
         <CCardBody>
           <CCardTitle className='p-2'>Kelas VII A</CCardTitle>
@@ -49,7 +57,7 @@ const Kelas = () => {
                 <CTableDataCell>Asep Sunandar</CTableDataCell>
                 <CTableDataCell>Dadang</CTableDataCell>
                 <CTableDataCell>
-                  <CImage rounded src="/images/vue.png" width={125} height={125} />
+                  <CImage rounded thumbnail src={FotoDatang} width={125} height={125} />
                 </CTableDataCell>
                 <CTableDataCell>
                   -
@@ -64,10 +72,10 @@ const Kelas = () => {
                 <CTableDataCell>Dang Iyun</CTableDataCell>
                 <CTableDataCell>Deden</CTableDataCell>
                 <CTableDataCell>
-                  <CImage rounded src="/images/vue.png" width={125} height={125} />
+                  <CImage rounded thumbnail src={FotoDatang} width={125} height={125} />
                 </CTableDataCell>
                 <CTableDataCell>
-                  <CImage rounded src="/images/vue.png" width={125} height={125} />
+                  <CImage rounded thumbnail src={FotoPulang} width={125} height={125} />
                 </CTableDataCell>
                 <CTableDataCell>
                   <CButton color="success" shape="rounded-pill">Hadir</CButton>
@@ -94,10 +102,10 @@ const Kelas = () => {
                 <CTableDataCell>Endang Sukanti</CTableDataCell>
                 <CTableDataCell>Dadang Kardus</CTableDataCell>
                 <CTableDataCell>
-                  <CImage rounded src="/images/vue.png" width={125} height={125} />
+                  <CImage rounded thumbnail src={FotoDatang} width={125} height={125} />
                 </CTableDataCell>
                 <CTableDataCell>
-                  <CImage rounded src="/images/vue.png" width={125} height={125} />
+                  <CImage rounded thumbnail src={FotoPulang} width={125} height={125} />
                 </CTableDataCell>
                 <CTableDataCell>
                 < CButton color="success" shape="rounded-pill" width={125} height={125}>Hadir</CButton>
@@ -108,20 +116,26 @@ const Kelas = () => {
           <CButton color="primary" onClick={() => setVisible(!visible)}>
             Simpan
           </CButton>
-          <CModal visible={visible} onClose={() => setVisible(false)}>
-            <CModalHeader>
-              <CModalTitle>Apaakah Data Yang Di Inputkan Sudah Benar?</CModalTitle>
-            </CModalHeader>
-            <CModalBody>Data yang sudah divalidasi akan dikirimkan kepada orang tua murid</CModalBody>
-            <CModalFooter>
-              <CButton color="secondary" onClick={() => setVisible(false)}>
-                Close
-              </CButton>
-              <CButton color="primary">Data Tersebut Sudah Benar</CButton>
-            </CModalFooter>
-          </CModal>
+          <CModal
+          alignment="center"
+          visible={visible}
+          onClose={() => setVisible(false)}
+          aria-labelledby="VerticallyCenteredExample"
+        >
+          <CModalHeader>
+            <CModalTitle id="VerticallyCenteredExample">Apaakah Data Yang Di Inputkan Sudah Benar?</CModalTitle>
+          </CModalHeader>
+          <CModalBody>Data yang sudah divalidasi akan dikirimkan kepada orang tua murid</CModalBody>
+          <CModalFooter>
+            <CButton color="secondary" onClick={() => setVisible(false)}>
+              Close
+            </CButton>
+            <CButton color="primary">Save changes</CButton>
+          </CModalFooter>
+        </CModal>
         </CCardBody>
       </CCard>
+    </div>
     </>
   )
 }

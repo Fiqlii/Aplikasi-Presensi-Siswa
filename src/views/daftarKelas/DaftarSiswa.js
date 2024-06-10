@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import CIcon from '@coreui/icons-react'
 // import classNames from 'classnames'
 
@@ -18,17 +18,27 @@ import {
   CFormInput,
   CPagination,
   CPaginationItem,
+  CBreadcrumb,
+  CBreadcrumbItem,
 } from '@coreui/react'
 
 import {
-  cilEyedropper,
-} from '@coreui/icons';
+  PencilSquareIcon,
+  EyeIcon,
+  TrashIcon,
+} from '@heroicons/react/24/solid'
 
 const DaftarSiswa = () => {
 
   const [entries, setEntries] = useState(5);
   return (
     <>
+    <div className='container-lg px-4'>
+      <CBreadcrumb className='breadcrumb mb-4'>
+        <CBreadcrumbItem href="#/dashboard">Dashboard</CBreadcrumbItem>
+        {/* <CBreadcrumbItem href="#/daftarKelas">Daftar Kelas</CBreadcrumbItem> */}
+        <CBreadcrumbItem active>Daftar Siswa</CBreadcrumbItem>
+      </CBreadcrumb>
       <CCard className="py-4 px-3">
         <CCardBody>
           <CRow xs={{ gutter: 2 }}>
@@ -37,6 +47,8 @@ const DaftarSiswa = () => {
               <CButton
                 color="primary"
                 shape="rounded-pill"
+                as="button"
+                href="#/inputDataSiswa"
               >
                 Tambah Data Siswa
               </CButton>
@@ -87,9 +99,14 @@ const DaftarSiswa = () => {
                 <CTableDataCell>VII A</CTableDataCell>
                 <CTableDataCell>081324950796</CTableDataCell>
                 <CTableDataCell>
-                  <CButton color="primary" style={{ width: '40px', height: '40px', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '0' }}>
-                    <CIcon icon={cilEyedropper} customClassName="nav-icon" style={{ width: '24px', height: '24px' }}/>
+                  {/* <div className="d-flex justify-content-between" style={{ width: '45%' }}> */}
+                  <CButton color="warning" style={{ width: '40px', height: '40px', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '0' }} as="button" href="#/editDataGuru">
+                    <PencilSquareIcon className="text-blue-500 size-lg" style={{ width: '24px', height: '24px' }}/>
                   </CButton>
+                    {/* <CButton color="danger" style={{ width: '40px', height: '40px', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '0' }}>
+                      <TrashIcon className="text-blue-500 size-lg" style={{ width: '24px', height: '24px' }}/>
+                    </CButton>
+                  </div> */}
                 </CTableDataCell>
               </CTableRow>
               <CTableRow>
@@ -100,8 +117,8 @@ const DaftarSiswa = () => {
                 <CTableDataCell>VII C</CTableDataCell>
                 <CTableDataCell>081324978456</CTableDataCell>
                 <CTableDataCell>
-                  <CButton color="primary" style={{ width: '40px', height: '40px', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '0' }}>
-                    <CIcon icon={cilEyedropper} customClassName="nav-icon" style={{ width: '24px', height: '24px' }}/>
+                  <CButton color="warning" style={{ width: '40px', height: '40px', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '0' }} as="button" href="#/editDataSiswa">
+                    <PencilSquareIcon className="text-blue-500 size-lg" style={{ width: '24px', height: '24px' }}/>
                   </CButton>
                 </CTableDataCell>
               </CTableRow>
@@ -113,8 +130,8 @@ const DaftarSiswa = () => {
                 <CTableDataCell>VII F</CTableDataCell>
                 <CTableDataCell>08133378456</CTableDataCell>
                 <CTableDataCell>
-                  <CButton color="primary" style={{ width: '40px', height: '40px', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '0' }}>
-                    <CIcon icon={cilEyedropper} customClassName="nav-icon" style={{ width: '24px', height: '24px' }}/>
+                  <CButton color="warning" style={{ width: '40px', height: '40px', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '0' }} as="button" href="#/editDataSiswa">
+                    <PencilSquareIcon className="text-blue-500 size-lg" style={{ width: '24px', height: '24px' }}/>
                   </CButton>
                 </CTableDataCell>
               </CTableRow>
@@ -126,8 +143,8 @@ const DaftarSiswa = () => {
                 <CTableDataCell>VII B</CTableDataCell>
                 <CTableDataCell>081324978456</CTableDataCell>
                 <CTableDataCell>
-                  <CButton color="primary" style={{ width: '40px', height: '40px', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '0' }}>
-                    <CIcon icon={cilEyedropper} customClassName="nav-icon" style={{ width: '24px', height: '24px' }}/>
+                  <CButton color="warning" style={{ width: '40px', height: '40px', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '0' }} as="button" href="#/editDataSiswa">
+                    <PencilSquareIcon className="text-blue-500 size-lg" style={{ width: '24px', height: '24px' }}/>
                   </CButton>
                 </CTableDataCell>
               </CTableRow>
@@ -142,6 +159,7 @@ const DaftarSiswa = () => {
           </CPagination>
         </CCardBody>
       </CCard>
+    </div>
     </>
   )
 }

@@ -1,6 +1,4 @@
 import React, { useState } from 'react'
-import CIcon from '@coreui/icons-react'
-
 
 import {
   CCard,
@@ -18,12 +16,14 @@ import {
   CFormInput,
   CPagination,
   CPaginationItem,
+  CBreadcrumb,
+  CBreadcrumbItem,
 } from '@coreui/react'
 
 import {
-  cilEyedropper,
-  cilTrash,
-} from '@coreui/icons';
+  TrashIcon,
+  PencilSquareIcon,
+} from '@heroicons/react/24/solid'
 
 const DaftarGuru = () => {
 
@@ -31,6 +31,11 @@ const DaftarGuru = () => {
 
   return (
     <>
+    <div className='container-lg px-4'>
+      <CBreadcrumb className='breadcrumb mb-4'>
+        <CBreadcrumbItem href="#/dashboard">Dashboard</CBreadcrumbItem>
+        <CBreadcrumbItem active>Daftar Guru</CBreadcrumbItem>
+      </CBreadcrumb>
       <CCard className='py-4 px-3'>
         <CCardBody>
           <CRow xs={{ gutter: 2 }}>
@@ -39,6 +44,8 @@ const DaftarGuru = () => {
               <CButton
                 color="primary"
                 shape="rounded-pill"
+                as="button"
+                href="#/inputDataGuru"
               >
                 Tambah Data Guru
               </CButton>
@@ -88,11 +95,11 @@ const DaftarGuru = () => {
                 <CTableDataCell>VII A</CTableDataCell>
                 <CTableDataCell>
                   <div className="d-flex justify-content-between" style={{ width: '45%' }}>
-                    <CButton color="warning" style={{ width: '40px', height: '40px', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '0' }}>
-                      <CIcon icon={cilEyedropper} customClassName="nav-icon" style={{ width: '24px', height: '24px' }}/>
+                    <CButton color="warning" style={{ width: '40px', height: '40px', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '0' }} as="button" href="#/editDataGuru">
+                      <PencilSquareIcon className="text-blue-500 size-lg" style={{ width: '24px', height: '24px' }}/>
                     </CButton>
                     <CButton color="danger" style={{ width: '40px', height: '40px', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '0' }}>
-                      <CIcon icon={cilTrash} customClassName="nav-icon" style={{ width: '24px', height: '24px' }}/>
+                      <TrashIcon className="text-blue-500 size-lg ml-2" style={{ width: '24px', height: '24px' }}/>
                     </CButton>
                   </div>
                 </CTableDataCell>
@@ -105,11 +112,11 @@ const DaftarGuru = () => {
                 <CTableDataCell>VII C</CTableDataCell>
                 <CTableDataCell>
                   <div className="d-flex justify-content-between" style={{ width: '45%' }}>
-                    <CButton color="warning" style={{ width: '40px', height: '40px', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '0' }}>
-                      <CIcon icon={cilEyedropper} customClassName="nav-icon" style={{ width: '24px', height: '24px' }}/>
+                    <CButton color="warning" style={{ width: '40px', height: '40px', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '0' }} as="button" href="#/editDataGuru">
+                      <PencilSquareIcon className="text-blue-500 size-lg" style={{ width: '24px', height: '24px' }}/>
                     </CButton>
                     <CButton color="danger" style={{ width: '40px', height: '40px', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '0' }}>
-                      <CIcon icon={cilTrash} customClassName="nav-icon" style={{ width: '24px', height: '24px' }}/>
+                      <TrashIcon className="text-blue-500 size-lg" style={{ width: '24px', height: '24px' }}/>
                     </CButton>
                   </div>
                 </CTableDataCell>
@@ -122,11 +129,11 @@ const DaftarGuru = () => {
                 <CTableDataCell>VII F</CTableDataCell>
                 <CTableDataCell>
                   <div className="d-flex justify-content-between" style={{ width: '45%' }}>
-                    <CButton color="warning" style={{ width: '40px', height: '40px', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '0' }}>
-                      <CIcon icon={cilEyedropper} customClassName="nav-icon" style={{ width: '24px', height: '24px' }}/>
+                    <CButton color="warning" style={{ width: '40px', height: '40px', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '0' }} as="button" href="#/editDataGuru">
+                      <PencilSquareIcon className="text-blue-500 size-lg" style={{ width: '24px', height: '24px' }}/>
                     </CButton>
                     <CButton color="danger" style={{ width: '40px', height: '40px', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '0' }}>
-                      <CIcon icon={cilTrash} customClassName="nav-icon" style={{ width: '24px', height: '24px' }}/>
+                      <TrashIcon className="text-blue-500 size-lg" style={{ width: '24px', height: '24px' }}/>
                     </CButton>
                   </div>
                 </CTableDataCell>
@@ -139,11 +146,11 @@ const DaftarGuru = () => {
                 <CTableDataCell>VII B</CTableDataCell>
                 <CTableDataCell>
                   <div className="d-flex justify-content-between" style={{ width: '45%' }}>
-                    <CButton color="warning" style={{ width: '40px', height: '40px', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '0' }}>
-                      <CIcon icon={cilEyedropper} customClassName="nav-icon" style={{ width: '24px', height: '24px' }}/>
+                    <CButton color="warning" style={{ width: '40px', height: '40px', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '0' }} as="button" href="#/editDataGuru">
+                      <PencilSquareIcon className="text-blue-500 size-lg" style={{ width: '24px', height: '24px' }}/>
                     </CButton>
                     <CButton color="danger" style={{ width: '40px', height: '40px', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '0' }}>
-                      <CIcon icon={cilTrash} customClassName="nav-icon" style={{ width: '24px', height: '24px' }}/>
+                      <TrashIcon className="text-blue-500 size-lg" style={{ width: '24px', height: '24px' }}/>
                     </CButton>
                   </div>
                 </CTableDataCell>
@@ -159,6 +166,7 @@ const DaftarGuru = () => {
           </CPagination>
         </CCardBody>
       </CCard>
+    </div>
     </>
   )
 }

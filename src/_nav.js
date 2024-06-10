@@ -1,47 +1,53 @@
 import React from 'react'
-import CIcon from '@coreui/icons-react'
+
 import {
-  cilDescription,
-  // cilNote,
-  cilCog,
-  cilHome,
-  cilNotes,
-  cilGroup,
-  cilList,
-  cilAccountLogout,
-} from '@coreui/icons'
-import { CNavGroup, CNavItem, CNavTitle } from '@coreui/react'
+  HomeIcon,
+  UserGroupIcon,
+  BuildingOfficeIcon,
+  TableCellsIcon,
+  ArrowLeftStartOnRectangleIcon,
+} from '@heroicons/react/24/solid'
+
+import {
+  CNavItem,
+} from '@coreui/react'
 
 const _nav = [
   {
     component: CNavItem,
     name: 'Dashboard',
     to: '/dashboard',
-    icon: <CIcon icon={cilHome} customClassName="nav-icon" />,
+    icon: <HomeIcon className="nav-icon text-blue-500"/>,
   },
   {
     component: CNavItem,
     name: 'Daftar Kelas',
     to: '/daftarKelas',
-    icon: <CIcon icon={cilList} customClassName="nav-icon" />,
+    icon: <BuildingOfficeIcon className="nav-icon text-blue-500"/>,
+  },
+  {
+    component: CNavItem,
+    name: 'Daftar Siswa',
+    to: '/daftarSiswa',
+    icon: <UserGroupIcon className="nav-icon text-blue-500"/>,
   },
   {
     component: CNavItem,
     name: 'Daftar Guru',
     to: '/daftarGuru',
-    icon: <CIcon icon={cilGroup} customClassName="nav-icon" />,
+    icon: <UserGroupIcon className="nav-icon text-blue-500"/>,
   },
-  {
-    component: CNavItem,
-    name: 'Rekap Absen',
-    to: '/rekapAbsen',
-    icon: <CIcon icon={cilNotes} customClassName="nav-icon" />,
-  },
+  // {
+  //   component: CNavItem,
+  //   name: 'Rekap Absen',
+  //   to: '/rekapAbsen',
+  //   icon: <TableCellsIcon className="nav-icon text-blue-500"/>,
+  // },
   {
     component: CNavItem,
     name: 'Sign Out',
     to: 'login',
-    icon: <CIcon icon={cilAccountLogout} customClassName="nav-icon" />,
+    icon: <ArrowLeftStartOnRectangleIcon className="nav-icon text-blue-500"/>,
   },
 ]
 

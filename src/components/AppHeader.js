@@ -13,7 +13,7 @@ import {
   cilMenu,
 } from '@coreui/icons'
 
-import { AppBreadcrumb } from './index'
+// import { AppBreadcrumb } from './index'
 import { AppHeaderDropdown } from './header/index'
 
 const AppHeader = () => {
@@ -41,13 +41,13 @@ const AppHeader = () => {
         >
           <CIcon icon={cilMenu} size="lg" />
         </CHeaderToggler>
-        <CHeaderNav>
+        {/* <CHeaderNav>
           <AppHeaderDropdown />
-        </CHeaderNav>
+        </CHeaderNav> */}
       </CContainer>
-      <CContainer className="px-4" fluid>
+      {/* <CContainer className="px-4" fluid>
         <AppBreadcrumb />
-      </CContainer>
+      </CContainer> */}
     </CHeader>
   )
 }
