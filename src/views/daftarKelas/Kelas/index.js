@@ -21,8 +21,8 @@ import {
   CBreadcrumbItem,
 } from '@coreui/react'
 
-import FotoDatang from '../../assets/images/vue.jpg';
-import FotoPulang from '../../assets/images/react.jpg';
+import FotoDatang from '../../../assets/images/vue.jpg';
+import FotoPulang from '../../../assets/images/react.jpg';
 
 
 const Kelas = () => {

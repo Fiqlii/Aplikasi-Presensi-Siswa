@@ -78,7 +78,7 @@ const DaftarSiswa = () => {
               </div>
             </CCardTitle>
           </CRow>
-          <CTable className='px-5 mt-3'>
+          <CTable responsive className='px-5 mt-3 text-center'>
             <CTableHead color="primary">
               <CTableRow>
                 <CTableHeaderCell scope="col">No</CTableHeaderCell>
@@ -99,14 +99,17 @@ const DaftarSiswa = () => {
                 <CTableDataCell>VII A</CTableDataCell>
                 <CTableDataCell>081324950796</CTableDataCell>
                 <CTableDataCell>
-                  {/* <div className="d-flex justify-content-between" style={{ width: '45%' }}> */}
-                  <CButton color="warning" style={{ width: '40px', height: '40px', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '0' }} as="button" href="#/editDataGuru">
-                    <PencilSquareIcon className="text-blue-500 size-lg" style={{ width: '24px', height: '24px' }}/>
-                  </CButton>
-                    {/* <CButton color="danger" style={{ width: '40px', height: '40px', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '0' }}>
-                      <TrashIcon className="text-blue-500 size-lg" style={{ width: '24px', height: '24px' }}/>
+                  <div className="d-flex justify-content-center" style={{ gap: '1px' }}>
+                    <CButton color="warning" className="p-1 mx-1" style={{ width: '40px', height: '40px' }} as="button" href="#/editDataSiswa">
+                      <PencilSquareIcon className="text-blue-500" style={{ width: '24px', height: '24px' }}/>
                     </CButton>
-                  </div> */}
+                    <CButton color="info" className="p-1 mx-1" style={{ width: '40px', height: '40px' }} href='#/absen'>
+                      <EyeIcon className="text-blue-500" style={{ width: '24px', height: '24px' }}/>
+                    </CButton>
+                    <CButton color="danger" className="p-1 mx-1" style={{ width: '40px', height: '40px' }}>
+                      <TrashIcon className="text-blue-500" style={{ width: '24px', height: '24px' }}/>
+                    </CButton>
+                  </div>
                 </CTableDataCell>
               </CTableRow>
               <CTableRow>
@@ -117,9 +120,17 @@ const DaftarSiswa = () => {
                 <CTableDataCell>VII C</CTableDataCell>
                 <CTableDataCell>081324978456</CTableDataCell>
                 <CTableDataCell>
-                  <CButton color="warning" style={{ width: '40px', height: '40px', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '0' }} as="button" href="#/editDataSiswa">
-                    <PencilSquareIcon className="text-blue-500 size-lg" style={{ width: '24px', height: '24px' }}/>
-                  </CButton>
+                  <div className="d-flex justify-content-center" style={{ gap: '1px' }}>
+                    <CButton color="warning" className="p-1 mx-1" style={{ width: '40px', height: '40px' }} as="button" href="#/editDataSiswa">
+                      <PencilSquareIcon className="text-blue-500" style={{ width: '24px', height: '24px' }}/>
+                    </CButton>
+                    <CButton color="info" className="p-1 mx-1" style={{ width: '40px', height: '40px' }} href='#/absen'>
+                      <EyeIcon className="text-blue-500" style={{ width: '24px', height: '24px' }}/>
+                    </CButton>
+                    <CButton color="danger" className="p-1 mx-1" style={{ width: '40px', height: '40px' }}>
+                      <TrashIcon className="text-blue-500" style={{ width: '24px', height: '24px' }}/>
+                    </CButton>
+                  </div>
                 </CTableDataCell>
               </CTableRow>
               <CTableRow>
@@ -130,9 +141,17 @@ const DaftarSiswa = () => {
                 <CTableDataCell>VII F</CTableDataCell>
                 <CTableDataCell>08133378456</CTableDataCell>
                 <CTableDataCell>
-                  <CButton color="warning" style={{ width: '40px', height: '40px', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '0' }} as="button" href="#/editDataSiswa">
-                    <PencilSquareIcon className="text-blue-500 size-lg" style={{ width: '24px', height: '24px' }}/>
-                  </CButton>
+                  <div className="d-flex justify-content-center" style={{ gap: '1px' }}>
+                    <CButton color="warning" className="p-1 mx-1" style={{ width: '40px', height: '40px' }} as="button" href="#/editDataSiswa">
+                      <PencilSquareIcon className="text-blue-500" style={{ width: '24px', height: '24px' }} />
+                    </CButton>
+                    <CButton color="info" className="p-1 mx-1" style={{ width: '40px', height: '40px' }} href='#/absen'>
+                      <EyeIcon className="text-blue-500" style={{ width: '24px', height: '24px' }}/>
+                    </CButton>
+                    <CButton color="danger" className="p-1 mx-1" style={{ width: '40px', height: '40px' }}>
+                      <TrashIcon className="text-blue-500" style={{ width: '24px', height: '24px' }}/>
+                    </CButton>
+                  </div>
                 </CTableDataCell>
               </CTableRow>
               <CTableRow>
@@ -143,9 +162,17 @@ const DaftarSiswa = () => {
                 <CTableDataCell>VII B</CTableDataCell>
                 <CTableDataCell>081324978456</CTableDataCell>
                 <CTableDataCell>
-                  <CButton color="warning" style={{ width: '40px', height: '40px', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '0' }} as="button" href="#/editDataSiswa">
-                    <PencilSquareIcon className="text-blue-500 size-lg" style={{ width: '24px', height: '24px' }}/>
-                  </CButton>
+                  <div className="d-flex justify-content-center" style={{ gap: '1px' }}>
+                    <CButton color="warning" className="p-1 mx-1" style={{ width: '40px', height: '40px' }} as="button" href="#/editDataSiswa">
+                      <PencilSquareIcon className="text-blue-500" style={{ width: '24px', height: '24px' }}/>
+                    </CButton>
+                    <CButton color="info" className="p-1 mx-1" style={{ width: '40px', height: '40px' }} href='#/absen'>
+                      <EyeIcon className="text-blue-500" style={{ width: '24px', height: '24px' }}/>
+                    </CButton>
+                    <CButton color="danger" className="p-1 mx-1" style={{ width: '40px', height: '40px' }}>
+                      <TrashIcon className="text-blue-500" style={{ width: '24px', height: '24px' }}/>
+                    </CButton>
+                  </div>
                 </CTableDataCell>
               </CTableRow>
             </CTableBody>

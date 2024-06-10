@@ -2,17 +2,17 @@ import React from 'react'
 
 //pages
 const Dashboard = React.lazy(() => import('./views/dashboard/Dashboard'))
-const DaftarKelas = React.lazy(() => import('./views/daftarKelas/DaftarKelas'))
+const DaftarKelas = React.lazy(() => import('./views/daftarKelas'))
 const Kelas = React.lazy(() => import('./views/daftarKelas/Kelas'))
 const DaftarSiswa = React.lazy(() => import('./views/daftarKelas/DaftarSiswa'))
-const InputDataSiswa = React.lazy(() => import('./views/daftarKelas/InputDataSiswa'))
-const EditDataSiswa = React.lazy(() => import('./views/daftarKelas/EditDataSiswa'))
-const DaftarGuru = React.lazy(() => import('./views/daftarGuru/DaftarGuru'))
+const InputDataSiswa = React.lazy(() => import('./views/daftarKelas/DaftarSiswa/InputDataSiswa'))
+const EditDataSiswa = React.lazy(() => import('./views/daftarKelas/DaftarSiswa/EditDataSiswa'))
+const DaftarGuru = React.lazy(() => import('./views/daftarGuru'))
 const InputDataGuru = React.lazy(() => import('./views/daftarGuru/InputDataGuru'))
 const EditDataGuru = React.lazy(() => import('./views/daftarGuru/EditDataGuru'))
-const Absen = React.lazy(() => import('./views/absen/Absen'))
-const RekapAbsen = React.lazy(() => import('./views/rekapAbsen/RekapAbsen'))
-const UploadSuratSakit = React.lazy(() => import('./views/uploadSuratSakit/UploadSuratSakit'))
+const Absen = React.lazy(() => import('./views/absen'))
+const RekapAbsen = React.lazy(() => import('./views/rekapAbsen'))
+const UploadSuratSakit = React.lazy(() => import('./views/uploadSuratSakit'))
 
 const Widgets = React.lazy(() => import('./views/widgets/Widgets'))
 
